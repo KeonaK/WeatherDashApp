@@ -1,32 +1,46 @@
-let locationObj;
+let currentCity;
 const apiKey = "e9a5fc2a165bcda7e086bb7e95914a2a";
-let btn = document.getElementById("btn");
+let search_button = document.getElementById("search_button");
+let searchList = document.getElementById("searchList");
 
 
-// let search = document.getElementById("search_input");
+let cities = []
+if(localStorage.getItem("cities") !== null){
+cities = JSON.parse(localStorage.getItem("cities"))
+}
+search_button.addEventListener("click", function(event){
+event.preventDefault();
+    currentCity = document.getElementById("search_input").value;
+    cities.push(currentCity);
+    localStorage.setItem("cities", JSON.stringify(cities));
 
-
-
-
-
-
-btn.addEventListener("click", function(){
-
-    locationObj = document.getElementById("search_input").value;
-    
-
-    fetch("https://api.openweathermap.org/data/2.5/forecast?q="+locationObj+"&appid="+apiKey)
+    fetch("https://api.openweathermap.org/data/2.5/forecast?q="+currentCity+"&appid="+apiKey)
 
     .then(response => response.json())
 
     .then(function(data){
+
         cityName = data.city.name;
-        window.localStorage.setItem( cityName, locationObj);
-        console.log(window.localStorage.getItem(cityName));
+        
 
-        console.log(data);
 
+        
+
+       
+        
+        console.log(cities)
+        for (let i = 0; i < cities.length; i++) {
+            console.log(i)
+           
+            let searchItem  = document.createElement('li');
+            searchItem.textContent = cities[i];
+        
+            //Set the text of the list element to the JSON response's .html_url property
+            
+        
+            searchList.appendChild(searchItem);
+          }
+        
     })
-
+    
 })
-
