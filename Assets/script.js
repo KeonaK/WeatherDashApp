@@ -1,4 +1,5 @@
 let currentCity;
+
 const apiKey = "e9a5fc2a165bcda7e086bb7e95914a2a";
 let cities = []
 let time = moment();
@@ -33,7 +34,7 @@ event.preventDefault();
       }
     
 
-    fetch("https://api.openweathermap.org/data/2.5/forecast?q="+currentCity+"&appid="+apiKey)
+    fetch("https://api.openweathermap.org/data/2.5/forecast?q=" +currentCity+"&appid="+apiKey +"&units=imperial")
 
     .then(response => response.json())
 
@@ -50,3 +51,5 @@ event.preventDefault();
     
 });
 
+//5 day forcast 
+// api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key}
