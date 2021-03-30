@@ -1,13 +1,15 @@
 let currentCity;
 const apiKey = "e9a5fc2a165bcda7e086bb7e95914a2a";
+let cities = []
 let search_button = document.getElementById("button-addon2");
 let searchList = document.getElementById("searchList");
 
 
-let cities = []
 if(localStorage.getItem("cities") !== null){
 cities = JSON.parse(localStorage.getItem("cities"))
 }
+
+//search button function
 search_button.addEventListener("click", function(event){
 event.preventDefault();
     currentCity = document.getElementById("search_input").value;
@@ -29,7 +31,7 @@ event.preventDefault();
 
     .then(function(data){
 
-        
+        console.log(data);
     })
     
-})
+});
