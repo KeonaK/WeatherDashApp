@@ -3,6 +3,11 @@ const apiKey = "e9a5fc2a165bcda7e086bb7e95914a2a";
 let cities = []
 let search_button = document.getElementById("button-addon2");
 let searchList = document.getElementById("searchList");
+let cityEl = document.getElementById("nameOfCity");
+let temperatureEl = document.getElementById("temperature");
+let humidityEl = document.getElementById("humidity");
+let windSpeedEl = document.getElementById("windSpeed");
+let uvIndexEl = document.getElementById("uvIndex");
 
 
 if(localStorage.getItem("cities") !== null){
