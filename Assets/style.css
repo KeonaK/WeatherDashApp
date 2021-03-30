@@ -8,4 +8,5 @@
 
 .weatherDisplay {
   border: 1px solid black;
+  padding-left: 30px;
 }
