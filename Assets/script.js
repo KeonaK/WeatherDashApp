@@ -10,6 +10,8 @@ let windSpeedEl = document.getElementById("windSpeed");
 let uvIndexEl = document.getElementById("uvIndex");
 
 
+
+
 if(localStorage.getItem("cities") !== null){
 cities = JSON.parse(localStorage.getItem("cities"))
 }
@@ -37,6 +39,11 @@ event.preventDefault();
     .then(function(data){
 
         console.log(data);
+       temperatureEl.textContent = "Temperature: " + data.list[0].main.temp + " ℉";
+       humidityEl.textContent = "Humidity:  " + data.list[0].main.humidity + " %";
+       windSpeedEl.textContent = "Wind Speed:  " + data.list[0].wind.speed + " MPH ";
+       
     })
     
 });
+
