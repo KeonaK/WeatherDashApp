@@ -9,7 +9,13 @@ let cityEl = document.getElementById("nameOfCity");
 let temperatureEl = document.getElementById("temperature");
 let humidityEl = document.getElementById("humidity");
 let windSpeedEl = document.getElementById("windSpeed");
+let forecastDate = document.getElementsByClassName("card-header");
 let uvIndexEl = document.getElementById("uvIndex");
+let day1 = document.getElementById("day1Temp");
+let day2 = document.getElementById("day2Temp");
+let day3 = document.getElementById("day3Temp");
+let day4 = document.getElementById("day4Temp");
+let day5 = document.getElementById("day5Temp");
 
 
 
@@ -46,10 +52,16 @@ event.preventDefault();
        temperatureEl.textContent = "Temperature: " + data.list[0].main.temp + " ℉";
        humidityEl.textContent = "Humidity:  " + data.list[0].main.humidity + " %";
        windSpeedEl.textContent = "Wind Speed:  " + data.list[0].wind.speed + " MPH ";
+       day1.textContent = "Temp: "+data.list[3].main.temp + " ℉";
+       day2.textContent = "Temp: "+data.list[11].main.temp + " ℉";
+       day3.textContent = "Temp: "+data.list[19].main.temp + " ℉";
+       day4.textContent = "Temp: "+data.list[27].main.temp + " ℉";
+       day5.textContent = "Temp: "+data.list[35].main.temp + " ℉";
+    //    forecastDate.textContent = data.list[3].dt_txt;
+    //    console.log(data.list[3].dt_txt)
        
     })
     
 });
 
-//5 day forcast 
-// api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key}
+
