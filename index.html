@@ -8,22 +8,30 @@
     <link rel="stylesheet" href="./Assets/style.css">
     <title>Weather Dashboard</title>
 </head>
+<!--Header section-->
 <header class = " mb-8 p-4 bg-secondary text-white">
 
     <h1 class= "text-center">Weather Dashboard</h1>
 </header>
 <body>
+    <!--searchbar area-->
     <section>
-
-        <div class="input-group mb-3">
-         <label for="searching">Search for a City: </label>
-         <input type="text" class=" col-md- 8 form-control" aria-describedby="button-addon2" id = "search_input">
-         <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
-      </div>
-        <ul id = "searchList"></ul>
+        <div class= "container-fluid bg-light ">
+            <div class="row col-12 col-md-3  ">
+                <label for="searching">Search for a City: </label>
+            <div class=" input-group mb-3">
+                <input type="text" class=" col -12form-control" aria-describedby="button-addon2" id = "search_input">
+                <button class=" btn btn-primary" type="button" id="button-addon2"><span class="iconify" data-inline="false" data-icon="bx:bx-search-alt" style="color: white; font-size: 24px;"></span></button>
+            </div>
+            <!--search history-->
+            <div class="card ">
+                 <ul class= "list-group list-group-flush"id = "searchList"></ul>
+            </div>
+             </div>
 
      </div>
 </section>
+<script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
     <script src="./Assets/script.js"></script>
 </body>
 </html>

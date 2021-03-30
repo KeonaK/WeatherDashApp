@@ -15,7 +15,8 @@ event.preventDefault();
     localStorage.setItem("cities", JSON.stringify(cities));
 
     for (let i = 0; i < cities.length; i++) {
-        let searchItem  = document.createElement('li');
+        let searchItem  = document.createElement('li')
+        searchItem.classList.add("list-group-item");
         searchItem.textContent = cities[i];
         searchList.appendChild(searchItem);
         cities = [];
