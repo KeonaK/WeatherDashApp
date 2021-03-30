@@ -1,6 +1,7 @@
 let currentCity;
 const apiKey = "e9a5fc2a165bcda7e086bb7e95914a2a";
 let cities = []
+let time = moment();
 let search_button = document.getElementById("button-addon2");
 let searchList = document.getElementById("searchList");
 let cityEl = document.getElementById("nameOfCity");
@@ -39,6 +40,8 @@ event.preventDefault();
     .then(function(data){
 
         console.log(data);
+        //display weather data
+        cityEl.textContent = data.city.name + "(" + time.format("M/DD/YYYY ") + ")";
        temperatureEl.textContent = "Temperature: " + data.list[0].main.temp + " ℉";
        humidityEl.textContent = "Humidity:  " + data.list[0].main.humidity + " %";
        windSpeedEl.textContent = "Wind Speed:  " + data.list[0].wind.speed + " MPH ";
