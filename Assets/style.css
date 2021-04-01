@@ -15,6 +15,11 @@
   padding-left: 1rem;
 }
 
+.forecastContainer {
+  margin-top: 1.5rem;
+  margin-left: 32rem;
+}
+
 .forecastSpace {
-  margin-right: 1.5rem;
+  margin-right: 2.5rem;
 }
