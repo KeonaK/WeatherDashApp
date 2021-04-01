@@ -68,8 +68,9 @@ event.preventDefault();
        humidDay3.textContent = "Humidity: "+data.list[19].main.humidity + " %";
        humidDay4.textContent = "Humidity: "+data.list[27].main.humidity + " %";
        humidDay5.textContent = "Humidity: "+data.list[35].main.humidity + " %";
-    //    forecastDate.textContent = data.list[3].dt_txt;
-    //    console.log(data.list[3].dt_txt)
+       forecastDate.textContent = data.list[3].dt_txt;
+       
+    
        
     })
     
