@@ -10,6 +10,11 @@ let temperatureEl = document.getElementById("temperature");
 let humidityEl = document.getElementById("humidity");
 let windSpeedEl = document.getElementById("windSpeed");
 let uvIndexEl = document.getElementById("uvIndex");
+let rain= document.getElementById("iconRain");
+let sun=document.getElementById("icon");
+let sun2=document.getElementById("icon2");
+let sun3=document.getElementById("icon3");
+let sun5=document.getElementById("icon5");
 let forecast1 = document.getElementById("forecast1");
 let forecast2 = document.getElementById("forecast2");
 let forecast3 = document.getElementById("forecast3");
@@ -57,10 +62,21 @@ event.preventDefault();
 
         console.log(data);
         //display weather data
-        cityEl.textContent = data.city.name + "(" + time.format("M/DD/YYYY ") + ")";
+        cityEl.innerHTML = data.city.name + "(" + time.format("M/DD/YYYY ") + ") " + `<span class="iconify" data-inline="false" data-icon="emojione:sun-behind-small-cloud" style="font-size: 60px;"></span>`;
        temperatureEl.textContent = "Temperature: " + data.list[0].main.temp + " ℉";
        humidityEl.textContent = "Humidity:  " + data.list[0].main.humidity + " %";
        windSpeedEl.textContent = "Wind Speed:  " + data.list[0].wind.speed + " MPH ";
+
+      //displays weather icons
+       rain.innerHTML = `<span class="iconify" data-inline="false" data-icon="emojione:sun-behind-rain-cloud" style="font-size: 60px;"></span>`;
+       sun.innerHTML = `<span class="iconify" data-inline="false" data-icon="emojione:sun" style="font-size: 60px;"></span>`;
+       sun2.innerHTML = `<span class="iconify" data-inline="false" data-icon="emojione:sun" style="font-size: 60px;"></span>`;
+       sun3.innerHTML = `<span class="iconify" data-inline="false" data-icon="emojione:sun" style="font-size: 60px;"></span>`;
+       sun5.innerHTML = `<span class="iconify" data-inline="false" data-icon="emojione:sun" style="font-size: 60px;"></span>`;
+
+      
+
+      //displays weather
        day1.textContent = "Temp: "+data.list[3].main.temp + " ℉";
        day2.textContent = "Temp: "+data.list[11].main.temp + " ℉";
        day3.textContent = "Temp: "+data.list[19].main.temp + " ℉";
@@ -72,7 +88,7 @@ event.preventDefault();
        humidDay3.textContent = "Humidity: "+data.list[19].main.humidity + " %";
        humidDay4.textContent = "Humidity: "+data.list[27].main.humidity + " %";
        humidDay5.textContent = "Humidity: "+data.list[35].main.humidity + " %";
-       
+       //displays weather date
        forecast1.textContent = moment().add(1, 'days').calendar(); 
        forecast2.textContent = moment().add(2, 'days').calendar(); 
        forecast3.textContent = moment().add(3, 'days').calendar(); 
