@@ -9,8 +9,12 @@ let cityEl = document.getElementById("nameOfCity");
 let temperatureEl = document.getElementById("temperature");
 let humidityEl = document.getElementById("humidity");
 let windSpeedEl = document.getElementById("windSpeed");
-let forecastDate = document.getElementsByClassName("card-header");
 let uvIndexEl = document.getElementById("uvIndex");
+let forecast1 = document.getElementById("forecast1");
+let forecast2 = document.getElementById("forecast2");
+let forecast3 = document.getElementById("forecast3");
+let forecast4 = document.getElementById("forecast4");
+let forecast5 = document.getElementById("forecast5");
 let day1 = document.getElementById("day1Temp");
 let day2 = document.getElementById("day2Temp");
 let day3 = document.getElementById("day3Temp");
@@ -68,7 +72,13 @@ event.preventDefault();
        humidDay3.textContent = "Humidity: "+data.list[19].main.humidity + " %";
        humidDay4.textContent = "Humidity: "+data.list[27].main.humidity + " %";
        humidDay5.textContent = "Humidity: "+data.list[35].main.humidity + " %";
-       forecastDate.textContent = data.list[3].dt_txt;
+       
+       forecast1.textContent = moment().add(1, 'days').calendar(); 
+       forecast2.textContent = moment().add(2, 'days').calendar(); 
+       forecast3.textContent = moment().add(3, 'days').calendar(); 
+       forecast4.textContent = moment().add(4, 'days').calendar(); 
+       forecast5.textContent = moment().add(5, 'days').calendar(); 
+       
        
     
        
