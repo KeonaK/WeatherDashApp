@@ -16,6 +16,11 @@ let day2 = document.getElementById("day2Temp");
 let day3 = document.getElementById("day3Temp");
 let day4 = document.getElementById("day4Temp");
 let day5 = document.getElementById("day5Temp");
+let humidDay1 = document.getElementById("humidDay1");
+let humidDay2 = document.getElementById("humidDay2");
+let humidDay3 = document.getElementById("humidDay3");
+let humidDay4 = document.getElementById("humidDay4");
+let humidDay5 = document.getElementById("humidDay5");
 
 
 
@@ -57,6 +62,12 @@ event.preventDefault();
        day3.textContent = "Temp: "+data.list[19].main.temp + " ℉";
        day4.textContent = "Temp: "+data.list[27].main.temp + " ℉";
        day5.textContent = "Temp: "+data.list[35].main.temp + " ℉";
+       
+       humidDay1.textContent = "Humidity: "+data.list[3].main.humidity + " %";
+       humidDay2.textContent = "Humidity: "+data.list[11].main.humidity+ " %";
+       humidDay3.textContent = "Humidity: "+data.list[19].main.humidity + " %";
+       humidDay4.textContent = "Humidity: "+data.list[27].main.humidity + " %";
+       humidDay5.textContent = "Humidity: "+data.list[35].main.humidity + " %";
     //    forecastDate.textContent = data.list[3].dt_txt;
     //    console.log(data.list[3].dt_txt)
        
