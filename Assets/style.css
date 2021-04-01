@@ -5,3 +5,12 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+.weatherDisplay {
+  margin-top: 1.2rem;
+}
+
+.card {
+  padding-top: 1.5rem;
+  padding-left: 1rem;
+}
